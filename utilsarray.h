@@ -9,5 +9,6 @@ int* utils_intpush(int *arr, size_t length, int iteam);
 float* utils_floatpush(float *arr, size_t length, float iteam);
 double* utils_doublepush(double *arr, size_t length, double iteam);
 char* utils_stringpush(char *arr, size_t length, char iteam);
-
+int* utils_intarrayreverse(int *arr, size_t lenght);
+void utils_printarray(int *arr, size_t lenght);
 // add reverse and dymaic

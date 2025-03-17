@@ -1,5 +1,7 @@
 #include "utilsarray.h"
+#include <stdio.h>
 #include <stdlib.h>
+
 
 
 int* utils_intpop(int *arr, size_t length, int amount){
@@ -136,4 +138,28 @@ char* utils_charpush(char *arr, size_t length, char iteam){
   }
   temp[length] = iteam;
   return temp;
+}
+
+int* utils_intarrayreverse(int *arr, size_t length){
+  if (length < 1){
+    return NULL; 
+  }
+  int *temp = (int*)malloc(length * 4);
+  if (temp == NULL){
+    return NULL;
+  }
+  int index = length - 1;
+  for(int i = 0; i < length; i++){
+    temp[i] = arr[index];
+    printf("%i", temp[i]);
+    index--;
+  }
+  return temp;
+}
+
+void utils_printarray(int *arr, size_t lenght){
+  int index = lenght - 1;
+  for(int i = 0; i < index; i++){
+    printf("%i",arr[i]);
+  }
 }
