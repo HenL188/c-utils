@@ -4,6 +4,8 @@
 #include <stddef.h>
 
 
+#define utils_free(ptr)(free(ptr),ptr = NULL)
+
 // memory
 void utils_dealloc(void *ptr);
 // strings
