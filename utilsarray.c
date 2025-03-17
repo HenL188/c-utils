@@ -90,7 +90,7 @@ int* utils_intpush(int *arr, size_t length, int iteam){
   return temp;
 }
 
-float* utils_floatpush(float *arr, size_t length, int iteam){
+float* utils_floatpush(float *arr, size_t length, float iteam){
   if (length < 1){
     return NULL; 
   }
@@ -106,7 +106,7 @@ float* utils_floatpush(float *arr, size_t length, int iteam){
   return temp;
 }
 
-double* utils_doublepush(double *arr, size_t length, int iteam){
+double* utils_doublepush(double *arr, size_t length, double iteam){
   if (length < 1){
     return NULL; 
   }
@@ -122,7 +122,7 @@ double* utils_doublepush(double *arr, size_t length, int iteam){
   return temp;
 }
 
-char* utils_stringpush(char *arr, size_t length, int iteam){
+char* utils_charpush(char *arr, size_t length, char iteam){
   if (length < 1){
     return NULL; 
   }
