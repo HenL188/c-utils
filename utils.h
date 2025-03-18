@@ -6,13 +6,12 @@
 #define Utils_free(ptr)(free(ptr), ptr = NULL)
 
 // memory
-void utils_dealloc(void *ptr);
+void inline utils_dealloc(void *ptr);
 // strings
-void utils_concat(char* const dst, size_t size, char* const iteam1, char* const iteam2);
+void inline utils_concat(char* const dst, size_t size, char* const iteam1, char* const iteam2);
 // arraies
 
 //misc
-void utils_puti(int i);
-void utils_putf(float f);
-void utils_putd(double d);
-
+void inline utils_puti(int i);
+void inline utils_putf(float f);
+void inline utils_putd(double d);
