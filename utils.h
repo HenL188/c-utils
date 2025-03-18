@@ -1,5 +1,4 @@
-#ifndef UTILS_H
-#define UTILS_H
+#pragma once
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -17,4 +16,3 @@ void utils_puti(int i);
 void utils_putf(float f);
 void utils_putd(double d);
 
-#endif
