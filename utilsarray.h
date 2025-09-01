@@ -1,6 +1,8 @@
 #pragma once
 #include <stdio.h>
 
+#define UTILS_ARRAY_LENGTH(a) (sizeof(a)/sizeof(a[0]))
+
 typedef void (*print_func)(void*);
 
 void print_int_array(void *item);
