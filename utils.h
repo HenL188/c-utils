@@ -2,20 +2,35 @@
 
 #include <stddef.h>
 #include <stdlib.h>
-
-#define Utils_free(ptr)(free(ptr), ptr = NULL)
+#include <stdio.h>
+#include <string.h>
 
 // memory
-void inline utils_dealloc(void *ptr);
+#define UTILS_FREE(ptr) (free(ptr), ptr = nullptr)
+
 // strings
-void inline utils_concat(char* const dst, size_t size, char* const iteam1, char* const iteam2);
+void inline utils_concat(char *const dst, size_t size, char *const iteam1, char *const iteam2)
+{
+    snprintf(dst, size, "%s%s\n", iteam1, iteam2);
+}
 
-//file
-void WriteFile(const char* contents, const char* filename, const char* mode);
-void ReadFile(unsigned char** contents, int* length, const char* filename, const char* mode);
-void PrintFile(unsigned char* contents, int length);
+// file
+void WriteFile(const char *contents, const char *filename, const char *mode);
+void ReadFile(unsigned char **contents, int *length, const char *filename, const char *mode);
+void PrintFile(unsigned char *contents, const int length);
 
-//misc
-void inline utils_puti(int i);
-void inline utils_putf(float f);
-void inline utils_putd(double d);
+// misc
+static void inline utils_puti(int i)
+{
+    printf("%i\n", i);
+}
+
+static void inline utils_putf(float f)
+{
+    printf("%f\n", f);
+}
+
+static void inline utils_putd(double d)
+{
+    printf("%lf\n", d);
+}
